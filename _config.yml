@@ -1,29 +1,90 @@
+# ------------------------
 # Basic Site Settings
-locale                   : "en-US"
-title                    : "Tu Dao — Research Page"
-title_separator          : "-"
-name                     : &name "Dao Duc Tu"
-description              : &description "Postdoctoral Researcher in Mathematics & Biology"
-url                      : "https://daoductu112.github.io"  # root site
-baseurl                  : ""  # leave empty since we use root
-repository               : "daoductu112/daoductu112.github.io"
+locale: "en-US"
+title: "Tu Dao — Postdoc in Mathematics & Biology"
+title_separator: "-"
+name: &name "Dao Duc Tu"
+description: &description "Postdoctoral Researcher in Mathematics and Biology"
+url: "https://daoductu112.github.io"   # your root domain
+baseurl: "/TuDao"                      # matches your repository name
 
-# Site Author
+# ------------------------
+# Author / Profile Info
 author:
-  avatar           : "profile.png"
-  name             : "Dao Duc Tu"
-  bio              : "Postdoctoral Scientist at Genome Institute of Singapore. Interested in combinatorics, bioinformatics, and chromatin organization."
-  location         : "Singapore"
-  employer         : "Genome Institute of Singapore"
-  email            : "your.email@domain.com"
+  avatar: "profile.png"                 # place your profile image in assets/images/
+  name: "Dao Duc Tu"
+  bio: "Postdoctoral Scientist at Genome Institute of Singapore. Research in combinatorics, bioinformatics, and chromatin organization."
+  location: "Singapore"
+  employer: "Genome Institute of Singapore"
+  email: "your.email@domain.com"       # replace with your actual email
 
-  # Academic websites
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-  orcid            : "https://orcid.org/XXXX-XXXX-XXXX-XXXX"   # put your real ORCID
-  pubmed           : "https://pubmed.ncbi.nlm.nih.gov/?term=Dao+DT" # adjust search
-  researchgate     : "https://www.researchgate.net/profile/Dao-Tu" # if you use RG
-  github           : "daoductu112"
+  # Academic links
+  googlescholar: "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"   # replace with your ORCID
+  pubmed: "https://pubmed.ncbi.nlm.nih.gov/?term=Dao+DT"
+  researchgate: "https://www.researchgate.net/profile/Dao-Tu"
+  github: "daoductu112"
 
-  # Social media
-  linkedin         : "https://www.linkedin.com/in/yourprofile/" # if you use
-  twitter          : ""  # leave blank if not using
+  # Optional social media
+  linkedin: "https://www.linkedin.com/in/yourprofile/"
+  twitter: ""  # leave blank if not used
+
+# ------------------------
+# Theme / Appearance
+theme: academicpages                   # or leave as default if you already have theme installed
+favicon: "/assets/images/favicon.ico"  # optional, replace if you have a favicon
+
+# ------------------------
+# Navigation Menu
+menu:
+  - name: "About"
+    link: "/about"
+  - name: "Research"
+    link: "/research"
+  - name: "Publications"
+    link: "/publications"
+  - name: "Teaching"
+    link: "/teaching"
+  - name: "Talks"
+    link: "/talks"
+  - name: "Contact"
+    link: "/contact"
+
+# ------------------------
+# SEO and Analytics (optional)
+analytics:
+  provider: "false"  # set to "google" if you have Google Analytics
+  google:
+    tracking_id: ""
+
+# ------------------------
+# Build Settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
+timezone: Etc/UTC
+
+# ------------------------
+# Collections (already used in Academic Pages)
+collections:
+  teaching:
+    output: true
+    permalink: /:collection/:path/
+  publications:
+    output: true
+    permalink: /:collection/:path/
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+  talks:
+    output: true
+    permalink: /:collection/:path/
+
+# ------------------------
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jemoji
