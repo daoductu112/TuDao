@@ -31,7 +31,7 @@ author:
 
 # ------------------------
 # Theme / Appearance
-theme: academicpages                   # or leave as default if you already have theme installed
+theme: minima               # or leave as default if you already have theme installed
 favicon: "/assets/images/favicon.ico"  # optional, replace if you have a favicon
 
 # ------------------------
